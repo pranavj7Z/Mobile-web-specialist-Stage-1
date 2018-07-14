@@ -56,9 +56,12 @@ nav {
   text-align:center;
 }
 nav h1 {
-  margin:auto;
+
+  margin-left:auto;
+  margin-right:auto;
 }
 nav h1 a {
+
   color: #fff;
   font-size: 14pt;
   line-height: 80px;
@@ -107,10 +110,13 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 
 /* ------------------------option bar--------------------*/
+
+
+
 .filter-options {
   width: 100%;
-  height: 70px;
-  margin-top:-20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 100px;
   background-color: #3397DB;
   align: center;
 }
@@ -118,19 +124,20 @@ nav h1 a {
   color: white;
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1;
+  line-height: 30px;
   margin: 0 20px;
+
 }
 .filter-options select {
   background-color: white;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
   font-size: 11pt;
-  justify-content:center;
+
   height: 35px;
   letter-spacing: 0;
   margin: 10px;
-  padding: 0 10px;
   width: 200px;
 }
 
@@ -201,6 +208,13 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 /* ====================== Restaurant Details ====================== */
+
+.container
+{
+ display:flex;
+ flex-wrap:wrap;
+}
+
 .inside header {
   position: fixed;
   top: 0;
@@ -209,7 +223,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
+  height: 100%;
   position: fixed;
   right: 0;
   top: 80px;
@@ -222,8 +236,10 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .inside #footer {
   bottom: 0;
+padding: 10px 40px 16px;
+ margin:0;
   position: absolute;
-  width: 50%;
+  width: calc(50% - 80px);;
 }
 #restaurant-name {
   color: #f18200;
@@ -231,12 +247,16 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 15px 0 30px;
+  text-align:center;
+  padding:0px 50px 20px 20px;
   text-transform: uppercase;
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.0);
+	width: 90%;   
+ border-radius: 15px;
+  
 }
 #restaurant-address {
   font-size: 12pt;
@@ -245,49 +265,289 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   font-size: 12pt;
+  border-radius: 15px;
   font-weight: 300;
+  margin-top:10px;
   letter-spacing: 10px;
-  margin: 0 0 20px;
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
 	width: 90%;
 }
-#restaurant-container, #reviews-container {
-  border-bottom: 1px solid #d9d9d9;
-  border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
+#restaurant-container{
+
+    border-collapse: collapse;
+    margin:2%;
+    padding: 140px 0px 0px;
+    width: calc(51%);
+
 }
+
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 30px 10px 10px 0px; 
+  margin-bottom:40px;
+  position:relative;
+  margin-left:5%;
+  width: calc(70%);
+
 }
 #reviews-container h2 {
   color: #f58500;
   font-size: 24pt;
+  
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
 #reviews-list {
-  margin: 0;
-  padding: 0;
+  
+  padding:0;
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
+border-radius: 15px 50px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 85%;
+  width: 50%;
 }
-#reviews-list li p {
-  margin: 0 0 10px;
+ #reviews-list li p:nth-child(2) {
+box-sizing: border-box;
+  display: inline-block;
+  width: 40%;
+  margin-top:30px;
+
+  text-align:right;
+  text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+  #reviews-list li p:nth-child(1) {
+box-sizing: border-box;
+  display: inline-block;
+  margin-top:30px;
+  width: 60%;
+  text-transform: uppercase;
+    border-radius: 5px;
+  }
+
+
+  #reviews-list li p:nth-child(3) {
+    background-color: orange;
+    padding:5px 20px;
+    width: 80px;
+    height:20px;
+    border-radius: 5px;
+  }
+
+#restaurant-hours {
+
+  border-collapse: collapse;
+  width: 90%;
+  box-shadow: 2px 2px 5px #888;
+}
+#restaurant-hours tr:nth-child(even) {
+  background: #fff;
+  border-radius: 15px;
+}
+#restaurant-hours tr:nth-child(odd) {
+  background: #ffc14d;  
+}
+#restaurant-hours tr:focus {
+  outline: 3px solid red;
+  background: #fcc;  
 }
 #restaurant-hours td {
-  color: #666;
+  padding: 6px 10px;  
+  color: #555;
 }
+
+
+/* Major Break point 1 -----media-queries------------------------------------------------------------------------- */
+
+@media screen and (min-width:731px) {
+#restaurant-address {
+  font-family: Arial,sans-serif;
+  font-size: 10pt;
+  font-weight: 200;
+  letter-spacing: 0;
+  text-align:center;
+  padding:0px 50px 20px 0px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+#reviews-container h2
+{
+font-family: Arial,sans-serif;
+  font-size: 20pt;
+  font-weight: 200;
+  letter-spacing: 0;
+  margin-left:19%;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+}
+
+@media screen and (max-width:730px) {
+
+
+  #restaurant-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .inside #map-container {
+    margin-top: 132px;
+    height: 250px;
+    width: 100%;
+    position: static;
+  }
+
+  #breadcrumb {
+    width: 100%;
+    border-top: 1px solid black;
+  }
+
+  nav h1 {
+    margin: 0px 10px 0px 10px;
+    padding-top: 5px;
+  }
+
+  h1#restaurant-name {
+   color: #f18200;
+
+  font-family: Arial,sans-serif;
+  font-size: 20pt;
+  font-weight: 200;
+  letter-spacing: 0;
+  margin-left:6%;
+  margin-top:40px;
+  text-align:center;
+  text-transform: uppercase;
+  line-height: 1.1;
+  }
+
+  #restaurant-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #restaurant-cuisine {
+    margin-left: auto;
+    margin-right: auto;
+ 
+  }
+
+  p#restaurant-address, #reviews-container h2 {
+    text-align: center;
+  }
+
+  #reviews-container {
+    width: 100%;
+    margin-top:50px;
+    margin-left:2.5%;
+
+  }
+
+  #reviews-list li p:last-of-type {
+    border-bottom: none;
+  }
+
+  ul#reviews-list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  ul#reviews-list li {
+    width: 80%;
+    margin: 20px;
+   
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #reviews-container h2 {
+    margin-bottom: 0;
+  }
+
+  table#restaurant-hours {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .inside #footer {
+    bottom: 0;
+    position: static;
+    width: 100%;
+    text-align: center;
+    display: normal;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+/*  Minor break point */
+@media screen and (min-width:387px) and (max-width:480px){
+nav h1 a {
+
+  color: #fff;
+  font-size: 10pt;
+  line-height: 80px;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+}
+@media screen and (max-width:410px) and (min-width:390px) {
+nav h1 a {
+
+  color: #fff;
+  font-size: 8pt;
+  line-height: 80px;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+}
+@media screen and (max-width:389px) {
+nav h1 a {
+  color: #fff;
+  font-size: 10pt;
+  line-height: 10px;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+}
+/*******************major breakpoint--------------------------------------------*/
+
+@media screen and (max-width:460px)
+{
+.filter-options {
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 150px;
+  background-color: #3397DB;
+  align: center;
+}
+}
+
+
