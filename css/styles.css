@@ -21,9 +21,18 @@ a {
 	color: orange;
 	text-decoration: none;
 }
-a:hover, a:focus {
-	color: #3397db;
-	text-decoration: none;
+a:hover,
+a:focus {
+	color: #3397DB;
+  text-decoration: none;
+}
+a:focus {
+  outline: 0;
+  box-shadow: 0 0 2px 3px red;
+}
+select:focus {
+  outline: 0;
+  box-shadow: 0 0 3px 3px red;
 }
 a img{
 	border: none 0px #fff;
@@ -70,6 +79,10 @@ nav h1 a {
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
+}
+nav h1 a:hover,
+nav h1 a:focus {
+  color: orange;
 }
 #breadcrumb {
     padding: 10px 40px 16px;
@@ -168,15 +181,10 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   width: 270px;
 }
 #restaurants-list .restaurant-img {
-  border: 2px solid #ccc;
   background-color: #ccc;
-    border-radius: 10px;
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  margin: 0;
-  margin-top:30px;
+  border-radius: 7px;
   max-width: 100%;
-  min-height: 248px;
-  min-width: 100%;
+  margin-top:32px;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -206,7 +214,10 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   text-decoration: none;
   text-transform: uppercase;
 }
-
+#restaurants-list li a:hover,
+#restaurants-list li a:focus {
+  background-color: #175782;
+}
 /* ====================== Restaurant Details ====================== */
 
 .container
@@ -318,6 +329,14 @@ border-radius: 15px 50px;
   position: relative;
   width: 50%;
 }
+
+#reviews-list li .name,
+#reviews-list li .date {
+  width: 50%;
+  background-color: #333;
+  line-height: 20pt;
+}
+
  #reviews-list li p:nth-child(2) {
 box-sizing: border-box;
   display: inline-block;
@@ -500,6 +519,10 @@ font-family: Arial,sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
   }
+}
+#restaurant-hours tr:focus {
+  outline: 3px solid red;
+  background: #fcc;
 }
 /*  Minor break point */
 @media screen and (min-width:387px) and (max-width:480px){
