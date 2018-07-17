@@ -6,6 +6,7 @@ self.addEventListener('install', function(event) {
        return cache.addAll([
         '/',
         '/index.html',
+        '/restaurant.html',
         '/css/styles.css',
         '/js/main.js',
 	'/service-worker.js',
@@ -62,16 +63,12 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request).then(function(response) {
-    // caches.match() always resolves
-    // but in case of success response will have value
+  event.respondWith(caches.match(event.request, {ignoreSearch: true}).then(function(response) {
     if (response !== undefined) {
       return response;
     } else {
       return fetch(event.request).then(function (response) {
-        // response may be used only once
-        // we need to save clone to put one copy in cache
-        // and serve second one
+   
         let responseClone = response.clone();
         
         caches.open(staticCacheName).then(function (cache) {
